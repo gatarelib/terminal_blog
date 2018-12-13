@@ -1,8 +1,8 @@
 __author__ = 'Libère'
 
-# use the appropriate port
+
 class Database(object):
-    URI = 'mongodg://127.0.0.1:****'
+    URI = 'mongodg://127.0.0.1:27017'
     DATABASE = None
 
     @staticmethod
@@ -16,8 +16,8 @@ class Database(object):
 
     @staticmethod
     def find(collection, query):
-        Database.DATABASE[collection].find(query)
+        return Database.DATABASE[collection].find(query)
 
     @staticmethod
     def find_one(collection, query):
-        Database.DATABASE[collection].find_one(query)
+        return Database.DATABASE[collection].find_one(query)
