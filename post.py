@@ -1,6 +1,8 @@
+import uuid
 from models.database import Database
 
 __author__ = 'Libère'
+
 
 class Post(object):
 
@@ -10,7 +12,7 @@ class Post(object):
         self.content = content
         self.author = author
         self.created_date = date
-        self.id = id
+        self.id = uuid.uuid4().hex              # generates random 32bit id
 
     def save_to_mongo(self):
         Database.insert(collection='post',
