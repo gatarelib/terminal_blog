@@ -12,7 +12,7 @@ class Post(object):
         self.content = content
         self.author = author
         self.created_date = date
-        self.id = uuid.uuid4().hex              # generates random 32bit id
+        self.id = uuid.uuid4().hex if id is None else id            # uuid4 generates random id
 
     def save_to_mongo(self):
         Database.insert(collection='post',
