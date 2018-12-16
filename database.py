@@ -2,12 +2,12 @@ __author__ = 'Libère'
 
 
 class Database(object):
-    URI = 'mongodg://127.0.0.1:27017'
+    URI = 'mongodb://127.0.0.1:27017'
     DATABASE = None
 
     @staticmethod
     def initialize():
-        client = pymogo.MongoClient(Database.URI)
+        client = pymongo.MongoClient(Database.URI)
         Database.DATABASE = client['fullstack']
 
     @staticmethod
