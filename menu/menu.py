@@ -1,6 +1,6 @@
 class Menu(object):
     def __init__(self):
-        #Ask user for author name
+        #Ask user for author's name
         #Check if they've already got an account
         #if not, prompt them to create one
         pass
