@@ -6,4 +6,4 @@ python:
 
 script: 
 
-  - python app.py
+  - python post.py
