@@ -1,15 +1,9 @@
-sudo: false
-
 language: python
 
 python:
-  - 2.7
 
-install:
-  - pip install codecov
+  - "2.7"
 
-script:
-  - coverage run blog.py
+script: 
 
-after_success:
-  - codecov
+  - python app.py
