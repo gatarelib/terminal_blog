@@ -1,9 +1,17 @@
 class Menu(object):
     def __init__(self):
-        #Ask user for author's name
-        #Check if they've already got an account
-        #if not, prompt them to create one
-        pass
+        self.user = input("enter your name: ")
+        if self._user_has_account():
+            print("Welcome back()".format(self.user))
+        else:
+            self._prompt_user_for_account()
+
+    def _user_has_account(self):
+        Databas.find_one('blog', {'author': self.user}) is not None
+
+
+
+
 
     def run_menu(self):
         #User Read or Write blog?
