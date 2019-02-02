@@ -8,6 +8,8 @@ A simple .py terminal blog with MongoDB backend
 ## MongoDb Installation
 Get MongoDb from their [website](https://www.mongodb.com/download-center#community)
 #### Create a Database and modify `./database.py` accordingly
+###### It is set to run on port:`27017` You can change this too
+
 # Usage
 From the project Dir:
 Run `python app.py` or `python3 app.py` for python 3 from your terminal
